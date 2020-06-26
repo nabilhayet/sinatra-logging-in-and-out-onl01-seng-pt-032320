@@ -9,13 +9,10 @@
 
   <a href="/logout">Log Out</a>
       <% @user = Helpers.current_user(session)%>
-       <% @u = Helpers.is_logged_in?(session)%>
-         <% if @user.id == @u.id%>
+
            <%= @user.username %>
            <%= @user.balance%>
-         <%else%>
-           <a href="/error"></a>
-         <%end %>
+         
 
   </body>
 </html>
