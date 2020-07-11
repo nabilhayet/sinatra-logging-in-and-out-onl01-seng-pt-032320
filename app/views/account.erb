@@ -9,9 +9,19 @@
 
   <a href="/logout">Log Out</a>
       <% @user = Helpers.current_user(session)%>
+<<<<<<< HEAD
       <h1>Welcome <%=@user.username%></h1>
        <h3>Your Balance: <%=@user.balance%></h3> 
 
+=======
+       <% @u = Helpers.is_logged_in?(session)%>
+         <% if @user.id == @u.id%>
+           <%= @user.username %>
+           <%= @user.balance%>
+         <%else%>
+           <%<a href="/">Home</a>
+         <%end %>
+>>>>>>> 3bdd20f65b97c4e94834a9be88de08daf937f7c1
 
   </body>
 </html>
